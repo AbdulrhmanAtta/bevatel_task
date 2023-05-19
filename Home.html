@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="taskOne.js"></script>
+    <script src="taskTwo.js"></script>
+    <script src="taskThree.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://images.wuzzuf-data.net/files/company_logo/Bevatel-Egypt-40591-1648540327-og.png"
+                width="200px" height="120px">
+            <div class="header-left">
+                <h3 class="heading">
+                    <span>Bevatel</span>
+                    <span>Task</span>
+                </h3>
+                <p class="subheading">Shopify Web Developer Position</p>
+            </div>
+        </div>
+        <div class="container-child">
+            <!-- Tab links -->
+            <div class="tab">
+                <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Task One')">Task One</button>
+                <button class="tablinks" onclick="openTab(event, 'Task Two')">Task Two</button>
+                <button class="tablinks" onclick="openTab(event, 'Task Three')">Task Three</button>
+            </div>
+
+            <!-- Tab Task One -->
+            <div id="Task One" class="tabcontent">
+                <h3>Task One: Refactor Array</h3>
+                <p class="question">We have array of numbers such [1,2,3,2,4,5,5,6,2,3,4,4,4,], and we want to refactor
+                    this array to
+                    new array without duplicate numbers and sorted such [1,2,3,4,5,6].</p>
+                <hr>
+                <h3>Test Code</h3>
+                <input type="text" id="taskOneInput"
+                    placeholder="Enter numbers separated by commas. Ex: 1,2,3,2,4,5,5,6,2,3,4,4,4">
+                <button class="button-test" onclick="taskOneTest()">Results</button>
+                <div class="output">
+                    <p id="outputTaskOne"></p>
+                </div>
+                <hr>
+                <h3>Code Snippet</h3>
+                <pre>
+        <code>
+// Create an array with duplicate numbers
+    const tastOneArray = [1, 2, 3, 2, 4, 5, 5, 6, 2, 3, 4, 4, 4];
+            
+// a Set to remove duplicates and convert it back to an array
+const NumbersSet = new Set(tastOneArray);
+const newArray = [...NumbersSet];
+            
+// Sort the array in ascending order
+const results = newArray.sort((a, b) =&gt; a - b);
+            
+// Print the resulting array without duplicate numbers and sorted
+console.log(results); //Output: [ 1, 2, 3, 4, 5, 6 ]
+            
+function taskOneTest() {
+// Get the value from the input field
+var inputText = document.getElementById(&quot;taskOneInput&quot;).value;
+              
+// Convert the input string to an array of numbers
+var tastOneArray = inputText.split(',').map(Number);
+              
+var NumbersSet = new Set(tastOneArray);
+var newArray = [...NumbersSet];
+var results = newArray.sort((a, b) =&gt; a - b);
+              
+// Display the resulting array without duplicate numbers and sorted
+document.getElementById(&quot;outputTaskOne&quot;).textContent = results.join(&quot;, &quot;);
+              }
+        </code>
+    </pre>
+            </div>
+            <!-- End Tab Task One -->
+
+            <!-- Tab Task Two -->
+            <div id="Task Two" class="tabcontent">
+                <h3>Task Two: Fill Missed Numbers</h3>
+                <p class="question">We have array of numbers such [1,2,3,5,8,12], and we need to refactor this array to
+                    new array
+                    and fill missed numbers and sort it to be [1,2,3,4,5,6,7,8,9,10,11,12].</p>
+                <hr>
+                <h3>Test Code</h3>
+                <input type="text" id="taskTwoArray" placeholder="Enter numbers separated by commas. Ex: 1,2,3,5,8,12">
+                <button class="button-test" onclick="taskTwoTest()">Results</button>
+                <div class="output">
+                    <p id="outputTaskTwo"></p>
+                </div>
+                <hr>
+                <h3>Code Snippet</h3>
+                <pre>
+            <code>
+// Create an array with missing numbers
+const taskTwoArray = [1, 2, 3, 5, 8, 12];
+                
+// Initialize an empty array to store the filled and sorted numbers
+const filledSortedArray = [];
+                
+// Loop through the range from the first number to the last number in the original array
+for (let i = taskTwoArray[0]; i &lt;= taskTwoArray[taskTwoArray.length - 1]; i++) {
+filledSortedArray.push(i); // Push each number into the filled array
+    }
+                
+// Print the resulting array with filled and sorted numbers
+console.log(filledSortedArray); //Output: [1,  2, 3, 4,  5, 6,  7, 8, 9, 10, 11, 12]
+                
+function taskTwoTest() {
+// Get the value from the input field
+var inputText = document.getElementById(&quot;taskTwoArray&quot;).value;
+                  
+// Convert the input string to an array of numbers
+var taskTwoArray = inputText.split(',').map(Number);
+                  
+var newArray = [];
+for (let i = taskTwoArray[0]; i &lt;= taskTwoArray[taskTwoArray.length - 1]; i++) {
+newArray.push(i); // Push each number into the filled array
+    }
+                  
+// Display the resulting array with filled and sorted numbers
+    document.getElementById(&quot;outputTaskTwo&quot;).textContent = newArray.join(&quot;, &quot;);
+    }
+                
+                
+            </code>
+        </pre>
+            </div>
+            <!-- End Tab Task Two -->
+
+            <!-- Tab Task Three -->
+            <div id="Task Three" class="tabcontent">
+                <h3>Task Three: Calculate Word Value</h3>
+                <p class="question">If we say the alphabetic charts start value with 1 like [A=1,B=2,C=3,D=4,, etc]. we
+                    need to
+                    calculate the word value like: [Ali => 1 + 12 + 9 = 22], try to calculate "Bevatel" , "Backend".</p>
+                <hr>
+                <h3>Test Code</h3>
+                <input type="text" id="taskThreeValue" placeholder="Enter word Ex: Bevatel">
+                <button class="button-test" onclick="taskThreeTest()">Results</button>
+                <div class="output">
+                    <p id="outputTaskThree"></p>
+                </div>
+                <hr>
+                <h3>Code Snippet</h3>
+                <pre>
+            <code>
+// Define a function to calculate the value of a word
+function calculateWordValue(word) {
+const alphabets = 'abcdefghijklmnopqrstuvwxyz';
+const lowercaseWord = word.toLowerCase();
+let value = 0;
+                  
+// Loop through each character in the word
+for (let i = 0; i &lt; lowercaseWord.length; i++) {
+onst char = lowercaseWord[i];
+const index = alphabets.indexOf(char);
+                  
+// If the character is a letter, add its value to the total
+if (index !== -1) {
+value += index + 1;
+}
+    }
+                  
+// Return the calculated value of the word
+return value;
+}
+                  
+// Define the words to calculate their values
+const word1 = 'Ali';
+const word2 = 'Bevatel';
+const word3 = 'Backend';
+                  
+// Print the calculated values of the words
+console.log(calculateWordValue(word1)); // Output: 22
+console.log(calculateWordValue(word2)); // Output: 67
+console.log(calculateWordValue(word3)); // Output: 40
+                
+function taskThreeTest() {
+// Get the value from the input field
+var word = document.getElementById(&quot;taskThreeValue&quot;).value;
+                  
+// Call the calculateWordValue function to calculate the value of the word
+var value = taskThreeTestValue(word);
+                  
+// Display the calculated value
+document.getElementById(&quot;outputTaskThree&quot;).textContent = &quot;The value of the word is: &quot; + value;
+}
+                  
+function taskThreeTestValue(word) {
+const alphabets = 'abcdefghijklmnopqrstuvwxyz';
+const lowercaseWord = word.toLowerCase();
+let value = 0;
+                  
+// Loop through each character in the word
+for (let i = 0; i &lt; lowercaseWord.length; i++) {
+const char = lowercaseWord[i];
+const index = alphabets.indexOf(char);
+                  
+// If the character is a letter, add its value to the total
+if (index !== -1) {
+ value += index + 1;
+ }
+    }
+                  
+ // Return the calculated value of the word
+    return value;
+    }
+            </code>
+        </pre>
+            </div>
+
+            <!-- End Tab Task Three -->
+
+        </div>
+          <div class="header-left">
+                <p>Done by Abdulrhman Atta</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
