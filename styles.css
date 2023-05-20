@@ -38,7 +38,7 @@ html, body {
 }
 
 .question {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: red;
   text-align: left;
   font-weight: 600;
@@ -86,8 +86,8 @@ html, body {
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #40B281;
-  background-color: #40B281;
+  border: 1px solid #214694;
+  background-color: #214694;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -182,6 +182,27 @@ input[type=text], select {
 
 input[type=submit]:hover {
   background-color: #45a049;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content span {
+  font-weight: 600;
+  font-size: small;
+}
+
+.developer {
+  font-size: medium!important;
+  font-style: italic;
+  color: #45a049;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 576px) {
