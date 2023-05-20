@@ -1,5 +1,4 @@
-**Shopify Web Developer Task Solution
-**
+**Shopify Web Developer Task Solution**
 
 This repository contains the solution for the Shopify Web Developer task. The task involved three different challenges related to array manipulation and word value calculation. The solution was implemented using JavaScript, HTML, and CSS.
 
@@ -26,7 +25,7 @@ In Task #3, we were tasked with calculating the value of a word based on the alp
 
 **Additional Notes**
 
-The solution leveraged various resources such as Stack Overflow, CodePen, and GeeksforGeeks to address specific challenges and implement the desired functionality.
+The solution leveraged various resources such as GeeksforGeeks and CodePen to address specific challenges and implement the desired functionality.
 The code is well-documented with comments to explain the algorithm flow and provide clarity on the implementation details.
 You can access the complete solution and code in the GitHub repository: https://github.com/AbdulrhmanAtta/bevatel_task/
 If you have any further questions or need additional information, please feel free to reach out. Thank you for considering my application.
